@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --primary: #3B82F6;
+    --primary-dark: #1D4ED8;
+    --secondary: #8B5CF6;
+    --accent: #F43F5E;
+    --bg-light: #F8FAFC;
+    --text-main: #0F172A;
+    --text-muted: #64748B;
+    --glass: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.5);
+}
+
+/* Custom Gradients */
+.bg-mesh {
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(217,100%,92%,1) 0, transparent 50%), 
+        radial-gradient(at 50% 0%, hsla(242,100%,93%,1) 0, transparent 50%), 
+        radial-gradient(at 100% 0%, hsla(186,100%,94%,1) 0, transparent 50%);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism */
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+.glass-dark {
+    background: rgba(15, 23, 42, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Typography & Base */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+}
+
+h1, h2, h3, h4, .brand-font {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* GSAP Hidden elements - will be animated in */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Interactive Cards */
+.tilt-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tilt-card:hover {
+    transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero UI Elements animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Premium Elevation & Shadows */
+.shadow-premium {
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -2px rgba(15, 23, 42, 0.02), 0 20px 40px -10px rgba(15, 23, 42, 0.05);
+}
+
+.shadow-glow-primary {
+    box-shadow: 0 0 30px -5px rgba(59, 130, 246, 0.2);
+}
+
+.shadow-glow-secondary {
+    box-shadow: 0 0 30px -5px rgba(139, 92, 246, 0.2);
+}
+
+/* Interactive States */
+.card-hover {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px -12px rgba(15, 23, 42, 0.12);
+}
+
+.card-hover:hover .glow-on-hover {
+    opacity: 1;
+}
+
+/* Base Adjustments */
+.tracking-premium {
+    letter-spacing: -0.02em;
+}
+
+.font-outfit {
+    font-family: 'Outfit', sans-serif;
+}

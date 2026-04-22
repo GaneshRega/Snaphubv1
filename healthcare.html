@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Solutions | SnapHub Technologies</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#8B5CF6',
+                        accent: '#F43F5E',
+                        dark: '#0F172A',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px -12px rgba(15, 23, 42, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-slate-50 antialiased overflow-x-hidden font-inter">
+
+    <!-- Navbar (Premium Standard) -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="snaphub logo.png" alt="SnapHub" class="h-10">
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-baseline space-x-10">
+                    <a href="index.html" class="text-dark font-medium hover:text-primary transition-colors">Home</a>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 text-dark font-medium hover:text-primary transition-colors focus:outline-none">
+                            <span>Products</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="bg-white rounded-2xl shadow-premium border border-slate-100 p-2 overflow-hidden text-left">
+                                <a href="paytech.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-primary"><i data-lucide="zap" class="w-4 h-4"></i></div>
+                                    <span>PayTech Platform</span>
+                                </a>
+                                <a href="recon-platform.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center text-secondary"><i data-lucide="refresh-cw" class="w-4 h-4"></i></div>
+                                    <span>Snap Recon</span>
+                                </a>
+                                <a href="ekyc-identity.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-rose-50 rounded-lg flex items-center justify-center text-accent"><i data-lucide="shield-check" class="w-4 h-4"></i></div>
+                                    <span>Identity & eKYC</span>
+                                </a>
+                                <a href="wallets.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-500"><i data-lucide="wallet" class="w-4 h-4"></i></div>
+                                    <span>Digital Wallets</span>
+                                </a>
+                                <a href="remittance.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center text-orange-500"><i data-lucide="globe" class="w-4 h-4"></i></div>
+                                    <span>Remittance Platform</span>
+                                </a>
+                                <a href="snapaml.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-100 rounded-lg flex items-center justify-center text-dark"><i data-lucide="shield-alert" class="w-4 h-4"></i></div>
+                                    <span>SnapAML</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 text-primary font-bold transition-colors focus:outline-none">
+                            <span>Industries</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="bg-white rounded-2xl shadow-premium border border-slate-100 p-2 overflow-hidden text-left grid grid-cols-1">
+                                <a href="banking.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="landmark" class="w-4 h-4"></i></div>
+                                    <span>Banking</span>
+                                </a>
+                                <a href="insurance.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="umbrella" class="w-4 h-4"></i></div>
+                                    <span>Insurance</span>
+                                </a>
+                                <a href="government.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="landmark" class="w-4 h-4"></i></div>
+                                    <span>Government</span>
+                                </a>
+                                <a href="healthcare.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="heart-pulse" class="w-4 h-4"></i></div>
+                                    <span>Healthcare</span>
+                                </a>
+                                <a href="corporates.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="building-2" class="w-4 h-4"></i></div>
+                                    <span>Corporates</span>
+                                </a>
+                                <a href="fmcg.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="shopping-cart" class="w-4 h-4"></i></div>
+                                    <span>FMCG</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-dark font-medium hover:text-primary transition-colors">About</a>
+                    <a href="resources.html" class="text-dark font-medium hover:text-primary transition-colors">Resources</a>
+                </div>
+
+                <div class="flex items-center space-x-5">
+                    <button class="md:hidden text-dark p-2" id="mobile-menu-btn"><i data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Healthcare Hero Section - Left Aligned Product Standard -->
+        <section class="relative min-h-[70vh] flex items-center pt-32 pb-24 overflow-hidden bg-mesh">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="flex flex-col lg:flex-row items-center gap-24">
+                    <div class="lg:w-1/2 space-y-10 reveal text-left">
+                        <div class="inline-flex items-center px-4 py-2 rounded-full text-xs font-bold bg-rose-500/10 text-rose-600 border border-rose-500/20 tracking-widest uppercase">
+                            Health Providers
+                        </div>
+                        <h1 class="text-5xl md:text-8xl font-bold tracking-premium text-dark leading-[1.05] font-outfit">
+                            Healthcare <br/>
+                            <span class="text-gradient">Innovations.</span>
+                        </h1>
+                        <p class="text-xl text-slate-500 leading-relaxed max-w-xl font-light">
+                            Optimizing patient billing and vendor payments with secure, automated reconciliation and tracking systems.
+                        </p>
+                    </div>
+
+                    <!-- Premium Visual: Healthcare Interface Storytelling -->
+                    <div class="lg:w-1/2 relative reveal h-[500px] flex items-center justify-center">
+                        <div class="relative w-full max-w-md">
+                            <!-- Billing Ledger Card -->
+                            <div class="bg-white p-8 rounded-[3rem] shadow-premium border border-slate-100 z-10 relative floating">
+                                <div class="flex items-center justify-between mb-8">
+                                    <div class="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center text-rose-500">
+                                        <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+                                    </div>
+                                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Medical Billing v1.2</span>
+                                </div>
+                                <div class="space-y-6">
+                                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                        <div class="h-2 w-32 bg-slate-200 rounded-full"></div>
+                                        <div class="px-2 py-1 bg-emerald-50 text-emerald-600 text-[8px] font-bold rounded-full">CLAIMED</div>
+                                    </div>
+                                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                        <div class="h-2 w-24 bg-slate-200 rounded-full"></div>
+                                        <div class="px-2 py-1 bg-amber-50 text-amber-600 text-[8px] font-bold rounded-full">PENDING</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Floating Security Badge -->
+                            <div class="absolute -top-12 -left-8 w-44 bg-dark text-white p-6 rounded-3xl shadow-2xl z-20 floating-delayed border border-white/10 text-center">
+                                <i data-lucide="shield-check" class="text-emerald-500 w-8 h-8 mx-auto mb-4"></i>
+                                <p class="text-[10px] font-bold font-outfit uppercase tracking-widest text-emerald-500 mb-1">HIPAA Compliant</p>
+                                <p class="text-[8px] text-slate-400 leading-relaxed">Enterprise-grade medical data security</p>
+                            </div>
+
+                            <!-- Mesh Glow -->
+                            <div class="absolute -z-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-rose-400/10 blur-[100px] rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Modules (Restored Parity) -->
+        <section class="py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Patient Billing -->
+                    <div class="p-12 bg-slate-50 rounded-[3.5rem] border border-transparent hover:border-primary/20 hover:bg-white transition-all reveal group">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary shadow-sm mb-10 group-hover:bg-primary group-hover:text-white transition-all"><i data-lucide="clipboard-list" class="w-8 h-8"></i></div>
+                        <h3 class="text-2xl font-bold text-dark font-outfit mb-6">Patient Billing</h3>
+                        <p class="text-slate-500 leading-relaxed font-light">
+                            Real-time reconciliation of hospital services, pharmacy bills, and patient payments.
+                        </p>
+                    </div>
+
+                    <!-- Insurance Payouts -->
+                    <div class="p-12 bg-slate-50 rounded-[3.5rem] border border-transparent hover:border-secondary/20 hover:bg-white transition-all reveal group" style="transition-delay: 100ms">
+                         <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-secondary shadow-sm mb-10 group-hover:bg-secondary group-hover:text-white transition-all"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                         <h3 class="text-2xl font-bold text-dark font-outfit mb-6">Insurance Payouts</h3>
+                         <p class="text-slate-500 leading-relaxed font-light">
+                            Speed up insurance claim settlements with automated verification and data matching.
+                         </p>
+                    </div>
+
+                    <!-- Vendor Payments -->
+                    <div class="p-12 bg-slate-50 rounded-[3.5rem] border border-transparent hover:border-accent/20 hover:bg-white transition-all reveal group" style="transition-delay: 200ms">
+                         <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent shadow-sm mb-10 group-hover:bg-accent group-hover:text-white transition-all"><i data-lucide="truck" class="w-8 h-8"></i></div>
+                         <h3 class="text-2xl font-bold text-dark font-outfit mb-6">Vendor Payments</h3>
+                         <p class="text-slate-500 leading-relaxed font-light">
+                            Manage pharmaceutical and equipment vendor payments with automated reconciliation.
+                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Sync: Global Footer (Restored Parity) -->
+        <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-16">
+                     <img src="snaphub logo.png" alt="SnapHub" class="h-10 opacity-70">
+                     <div class="flex flex-wrap justify-center gap-10 text-xs font-bold tracking-widest uppercase text-slate-400">
+                        <a href="paytech.html" class="hover:text-dark transition-colors">Products</a>
+                        <a href="industries.html" class="hover:text-dark transition-colors">Industries</a>
+                        <a href="about.html" class="hover:text-dark transition-colors">About Us</a>
+                        <a href="resources.html" class="hover:text-dark transition-colors">Resources</a>
+                     </div>
+                     <div class="flex items-center gap-6">
+                        <a href="#" class="text-slate-300 hover:text-primary transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-slate-300 hover:text-primary transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-slate-300 hover:text-primary transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                     </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 pt-8 border-t border-slate-50">
+                    <div class="space-y-4">
+                        <p class="text-sm text-slate-500 max-w-sm">Empowering financial institutions with robust, scalable payment solutions.</p>
+                        <div class="space-y-2 text-xs text-slate-400">
+                            <p class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4"></i> 4653/21, Ansari Road, Darya Ganj, Delhi, 110002</p>
+                            <p class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4"></i> 0091 - 9810355291</p>
+                            <p class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4"></i> contact@snaphub.tech</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-end items-end gap-4 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-300">
+                        <p>&copy; 2026 SnapHub Technologies Private Limited. All rights reserved.</p>
+                        <div class="flex gap-8">
+                            <a href="about.html" class="hover:text-dark">About Us</a>
+                            <a href="index.html#offerings" class="hover:text-dark">Offerings</a>
+                            <a href="resources.html" class="hover:text-dark">Resources</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

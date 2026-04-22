@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Library | SnapHub Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#8B5CF6',
+                        accent: '#F43F5E',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 p-10">
+
+    <div class="max-w-4xl mx-auto space-y-20">
+        <header>
+            <h1 class="text-4xl font-bold text-slate-800 mb-4">SnapHub Component Library</h1>
+            <p class="text-slate-500">Copy these patterns to maintain the premium design across all inner pages.</p>
+        </header>
+
+        <!-- Section: Buttons -->
+        <section>
+            <h2 class="text-2xl font-bold mb-8 pb-2 border-b border-slate-200">Buttons</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="px-8 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/30 hover:bg-primary-dark hover:-translate-y-1 transition-all">Primary Action</button>
+                <button class="px-8 py-4 bg-white text-dark font-bold rounded-full border border-slate-200 hover:bg-slate-50 transition-all">Secondary Action</button>
+                <button class="px-8 py-4 bg-dark text-white font-bold rounded-full hover:bg-slate-800 transition-all shadow-xl">Dark Action</button>
+            </div>
+        </section>
+
+        <!-- Section: Cards -->
+        <section>
+            <h2 class="text-2xl font-bold mb-8 pb-2 border-b border-slate-200">Interactive Cards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="tilt-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 group">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i data-lucide="zap" class="w-6 h-6 text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Feature Title</h3>
+                    <p class="text-slate-500">This is a description of a feature with a tilt effect on hover.</p>
+                </div>
+                
+                <div class="glass p-8 rounded-3xl border border-white/50 shadow-lg">
+                    <h3 class="text-xl font-bold text-dark mb-2">Glassmorphic Card</h3>
+                    <p class="text-slate-500">Use this for sections with colorful or gradient backgrounds.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Inner Hero Pattern -->
+        <section>
+            <h2 class="text-2xl font-bold mb-8 pb-2 border-b border-slate-200">Inner Page Hero Pattern</h2>
+            <div class="bg-mesh p-12 rounded-[3rem] text-center space-y-4">
+                <span class="text-primary font-bold uppercase text-xs tracking-widest">Industry Solution</span>
+                <h2 class="text-4xl font-bold text-dark">Banking & Finance</h2>
+                <p class="text-slate-600 max-w-xl mx-auto">Modernizing traditional banking core systems with cloud-native payment rails.</p>
+            </div>
+        </section>
+
+        <!-- Section: Typography -->
+        <section>
+            <h2 class="text-2xl font-bold mb-8 pb-2 border-b border-slate-200">Typography</h2>
+            <div class="space-y-4">
+                <h1 class="text-6xl font-bold text-dark tracking-tight">H1 Heading - Outfit</h1>
+                <h2 class="text-4xl font-bold text-dark tracking-tight">H2 Heading - Outfit</h2>
+                <h3 class="text-2xl font-bold text-dark">H3 Heading - Outfit</h3>
+                <p class="text-lg text-slate-600 leading-relaxed">Body Text Large - Inter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="text-base text-slate-500 leading-relaxed">Body Text Normal - Inter. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

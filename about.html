@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SnapHub Technologies</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#8B5CF6',
+                        accent: '#F43F5E',
+                        dark: '#0F172A',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px -12px rgba(15, 23, 42, 0.1)',
+                    },
+                    letterSpacing: {
+                        'premium': '-0.02em',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-slate-50 antialiased overflow-x-hidden font-inter">
+
+    <!-- Navbar (Premium Standard) -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="snaphub logo.png" alt="SnapHub" class="h-10">
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-baseline space-x-10">
+                    <a href="index.html" class="text-dark font-medium hover:text-primary transition-colors">Home</a>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 text-dark font-medium group-hover:text-primary transition-colors focus:outline-none">
+                            <span>Products</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="bg-white rounded-2xl shadow-premium border border-slate-100 p-2 overflow-hidden text-left">
+                                <a href="paytech.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-primary"><i data-lucide="zap" class="w-4 h-4"></i></div>
+                                    <span>PayTech Platform</span>
+                                </a>
+                                <a href="recon-platform.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center text-secondary"><i data-lucide="refresh-cw" class="w-4 h-4"></i></div>
+                                    <span>Snap Recon</span>
+                                </a>
+                                <a href="ekyc-identity.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-rose-50 rounded-lg flex items-center justify-center text-accent"><i data-lucide="shield-check" class="w-4 h-4"></i></div>
+                                    <span>Identity & eKYC</span>
+                                </a>
+                                <a href="wallets.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-500"><i data-lucide="wallet" class="w-4 h-4"></i></div>
+                                    <span>Digital Wallets</span>
+                                </a>
+                                <a href="remittance.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center text-orange-500"><i data-lucide="globe" class="w-4 h-4"></i></div>
+                                    <span>Remittance Platform</span>
+                                </a>
+                                <a href="snapaml.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-100 rounded-lg flex items-center justify-center text-dark"><i data-lucide="shield-alert" class="w-4 h-4"></i></div>
+                                    <span>SnapAML</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 text-dark font-medium group-hover:text-primary transition-colors focus:outline-none">
+                            <span>Industries</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="bg-white rounded-2xl shadow-premium border border-slate-100 p-2 overflow-hidden text-left grid grid-cols-1">
+                                <a href="banking.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="landmark" class="w-4 h-4"></i></div>
+                                    <span>Banking</span>
+                                </a>
+                                <a href="insurance.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="umbrella" class="w-4 h-4"></i></div>
+                                    <span>Insurance</span>
+                                </a>
+                                <a href="government.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="landmark" class="w-4 h-4"></i></div>
+                                    <span>Government</span>
+                                </a>
+                                <a href="healthcare.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="heart-pulse" class="w-4 h-4"></i></div>
+                                    <span>Healthcare</span>
+                                </a>
+                                <a href="corporates.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="building-2" class="w-4 h-4"></i></div>
+                                    <span>Corporates</span>
+                                </a>
+                                <a href="fmcg.html" class="flex items-center space-x-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-xl transition-all">
+                                    <div class="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400"><i data-lucide="shopping-cart" class="w-4 h-4"></i></div>
+                                    <span>FMCG</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-primary font-bold transition-colors">About</a>
+                    <a href="resources.html" class="text-dark font-medium hover:text-primary transition-colors">Resources</a>
+                </div>
+
+                <div class="flex items-center space-x-5">
+                    <button class="md:hidden text-dark p-2" id="mobile-menu-btn"><i data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- About Hero Section - Product Focused Alignment -->
+        <section class="relative min-h-[60vh] flex items-center pt-32 pb-24 overflow-hidden bg-mesh">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="flex flex-col lg:flex-row items-center gap-24">
+                    <div class="lg:w-1/2 space-y-10 reveal text-left">
+                        <div class="inline-flex items-center px-4 py-2 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20 tracking-widest uppercase">
+                            Our Story
+                        </div>
+                        <h1 class="text-5xl md:text-8xl font-bold tracking-premium text-dark leading-[1.05] font-outfit">
+                            About <br/>
+                            <span class="text-gradient">SnapHub.</span>
+                        </h1>
+                        <p class="text-xl text-slate-500 leading-relaxed max-w-xl font-light">
+                            Empowering financial excellence through precision technology and innovative reconciliation frameworks.
+                        </p>
+                    </div>
+                    
+                    <!-- Visual for About Section -->
+                    <div class="lg:w-1/2 relative reveal flex items-center justify-center h-[400px]">
+                        <div class="relative w-full max-w-md">
+                            <div class="bg-white p-12 rounded-[3.5rem] shadow-premium border border-slate-100 z-10 relative floating">
+                                <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-primary mb-8"><i data-lucide="target" class="w-8 h-8"></i></div>
+                                <h4 class="text-2xl font-bold text-dark font-outfit mb-4">Precision Excellence</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Driving the next wave of financial innovation through modular architecture and compliant data integrity. We specialize in the automation of key accounting and financial business processes.</p>
+                            </div>
+                            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-[2rem] shadow-xl flex items-center justify-center text-white floating-delayed z-20">
+                                <i data-lucide="award" class="w-12 h-12"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision (1:1 Source Content) -->
+        <section class="py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 reveal">
+                    <div>
+                        <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-4 block">Our Mission</span>
+                        <h2 class="text-4xl font-bold text-dark mb-10 font-outfit">Driving Financial Success.</h2>
+                        <p class="text-xl text-slate-500 font-light leading-relaxed">
+                            To empower businesses across diverse industries with precision reconciliation solutions, driving financial excellence, and lasting success. To be the global leader in reconciliation services, continually innovating to exceed our clients' expectations and positively impacting industries worldwide.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="text-secondary font-bold uppercase tracking-widest text-[10px] mb-4 block">Our Vision</span>
+                        <h2 class="text-4xl font-bold text-dark mb-10 font-outfit">Revolutionizing Operations.</h2>
+                        <p class="text-xl text-slate-500 font-light leading-relaxed">
+                            Our vision is to involve robust technology solutions that revolutionize the landscape of business operations, setting new standards for efficiency and excellence. We aspire to redefine the very essence of how operations are conducted, delivering innovation, and driving businesses toward a brighter, digitally empowered future.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values (Restored Parity) -->
+        <section class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-20 reveal">
+                    <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-4 block">Principles</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-dark font-outfit tracking-premium">Our Core Values</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                    <div class="p-8 bg-white rounded-3xl text-center shadow-premium border border-slate-100 reveal transition-all hover:-translate-y-2">
+                         <h3 class="font-bold text-dark text-sm font-outfit">Precision</h3>
+                    </div>
+                    <div class="p-8 bg-white rounded-3xl text-center shadow-premium border border-slate-100 reveal transition-all hover:-translate-y-2" style="transition-delay: 50ms">
+                         <h3 class="font-bold text-dark text-sm font-outfit">Innovation</h3>
+                    </div>
+                    <div class="p-8 bg-white rounded-3xl text-center shadow-premium border border-slate-100 reveal transition-all hover:-translate-y-2" style="transition-delay: 100ms">
+                         <h3 class="font-bold text-dark text-sm font-outfit">Customer Centricity</h3>
+                    </div>
+                    <div class="p-8 bg-white rounded-3xl text-center shadow-premium border border-slate-100 reveal transition-all hover:-translate-y-2" style="transition-delay: 150ms">
+                         <h3 class="font-bold text-dark text-sm font-outfit">Integrity</h3>
+                    </div>
+                    <div class="p-8 bg-white rounded-3xl text-center shadow-premium border border-slate-100 reveal transition-all hover:-translate-y-2" style="transition-delay: 200ms">
+                         <h3 class="font-bold text-dark text-sm font-outfit">Collaboration</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership - Board Members (Full Source Bios) -->
+        <section class="py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="max-w-3xl mb-24 reveal">
+                    <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-4 block">Leadership</span>
+                    <h2 class="text-5xl md:text-7xl font-bold text-dark font-outfit tracking-premium">Board Members.</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                    <!-- Gaurav Anand -->
+                    <div class="reveal group">
+                        <div class="aspect-[4/5] overflow-hidden rounded-[4rem] bg-slate-100 border border-slate-100 mb-10 shadow-premium">
+                             <img src="https://snaphub.tech/img/gourav.jpg" alt="Gaurav Anand" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <h4 class="text-3xl font-bold text-dark font-outfit mb-2">Gaurav Anand</h4>
+                        <p class="text-xs font-bold uppercase text-primary tracking-widest mb-6">Founder & CEO</p>
+                        <p class="text-sm text-slate-500 leading-relaxed font-light">
+                            Mr. Anand is a postgraduate in business administration and Law with around two decades experience in the EMEA region. He successfully built ICICI’s business in Oman followed by regional coverage with UBS. He went on to build a successful regional franchise for First Rand Bank, Africa’s largest financial institution by market capitalisation. Mr. Anand is currently also an advisor in the financial services industry. Mr. Anand’s expertise straddles Consulting, Investment banking, Financial advisory and business leadership.
+                        </p>
+                    </div>
+
+                    <!-- Dixit Jain -->
+                    <div class="reveal group" style="transition-delay: 100ms">
+                        <div class="aspect-[4/5] overflow-hidden rounded-[4rem] bg-slate-100 border border-slate-100 mb-10 shadow-premium">
+                             <img src="https://snaphub.tech/img/dixit.jpg" alt="Dixit Jain" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <h4 class="text-3xl font-bold text-dark font-outfit mb-2">Dixit Jain</h4>
+                        <p class="text-xs font-bold uppercase text-secondary tracking-widest mb-6">Founding Director</p>
+                        <p class="text-sm text-slate-500 leading-relaxed font-light">
+                            A Chartered Accountant by profession and associated with the most respectable fraternity i.e., ICAI. He started his journey in 2012 with G.P. Kapadia & Co as an Assistant Manager for Non-Resident Taxation and FEMA and after a year, he took over the management of GPK Businessmen Services (Branch of G.P. Kapadia & Co.) in Dubai for serving the needs of Non-Resident of India with regards to Indian Taxation and FEMA compliance.
+                        </p>
+                    </div>
+
+                    <!-- Kuldeep Mathur -->
+                    <div class="reveal group" style="transition-delay: 200ms">
+                        <div class="aspect-[4/5] overflow-hidden rounded-[4rem] bg-slate-100 border border-slate-100 mb-10 shadow-premium">
+                             <img src="https://snaphub.tech/img/kuldeep.png" alt="Kuldeep Mathur" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <h4 class="text-3xl font-bold text-dark font-outfit mb-2">Kuldeep Mathur</h4>
+                        <p class="text-xs font-bold uppercase text-accent tracking-widest mb-6">Founder</p>
+                        <p class="text-sm text-slate-500 leading-relaxed font-light">
+                            Mr. Mathur is a graduate and having more than 25 years of experience in the field of production and distribution of FMCG goods. He is currently also a director in several companies which are in the field of distribution of FMCG goods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Management Team (Full Source Bios) -->
+        <section class="py-32 bg-slate-50 border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="max-w-3xl mb-24 reveal">
+                    <span class="text-secondary font-bold uppercase tracking-widest text-[10px] mb-4 block">Expertise</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-dark font-outfit tracking-premium">Management Team.</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                    <!-- Swapan Chakraborty -->
+                    <div class="reveal">
+                        <div class="aspect-square rounded-[3rem] overflow-hidden mb-10 border border-slate-200 bg-white p-2">
+                             <div class="w-full h-full rounded-[2.5rem] overflow-hidden">
+                                <img src="https://snaphub.tech/img/swapan.jpg" alt="Swapan Chakraborty" class="w-full h-full object-cover grayscale">
+                             </div>
+                        </div>
+                        <h4 class="text-2xl font-bold text-dark font-outfit mb-2">Swapan Chakraborty</h4>
+                        <p class="text-[10px] font-bold uppercase text-primary tracking-widest mb-6">Adviser</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
+                            Mr. Chakraborty has 30 years experience with Indian Oil Corporation. He served in various capacities across North and Central India and retired as the Executive Director (F&A) from the Western region of IOCL. He is a result oriented and visionary leader with extensive experience in Accounting, Budgeting, Taxation & Management reporting, Corporate Finance, and Strategic Planning in a Multi Unit Environment.
+                        </p>
+                    </div>
+
+                    <!-- Vinod K. Sharma -->
+                    <div class="reveal" style="transition-delay: 100ms">
+                         <div class="aspect-square rounded-[3rem] overflow-hidden mb-10 border border-slate-200 bg-white p-2">
+                             <div class="w-full h-full rounded-[2.5rem] overflow-hidden">
+                                <img src="https://snaphub.tech/img/vinod.png" alt="Vinod Sharma" class="w-full h-full object-cover grayscale">
+                             </div>
+                        </div>
+                        <h4 class="text-2xl font-bold text-dark font-outfit mb-2">Vinod K. Sharma</h4>
+                        <p class="text-[10px] font-bold uppercase text-secondary tracking-widest mb-6">Adviser</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
+                            Vinod K. Sharma is a highly accomplished professional with over three decades of experience in the fields of Accounts, Audit, Networking, Routing, Operations Management, and Business Development. His expertise extends to supply chain management, cost optimization, and network design.
+                        </p>
+                    </div>
+
+                    <!-- Mihir Mathur -->
+                    <div class="reveal" style="transition-delay: 200ms">
+                         <div class="aspect-square rounded-[3rem] overflow-hidden mb-10 border border-slate-200 bg-white p-2">
+                             <div class="w-full h-full rounded-[2.5rem] overflow-hidden">
+                                <img src="https://snaphub.tech/img/mihir.jpg" alt="Mihir Mathur" class="w-full h-full object-cover grayscale">
+                             </div>
+                        </div>
+                        <h4 class="text-2xl font-bold text-dark font-outfit mb-2">Mihir Mathur</h4>
+                        <p class="text-[10px] font-bold uppercase text-accent tracking-widest mb-6">Founder & Vice-President</p>
+                        <p class="text-xs text-slate-500 leading-relaxed font-light">
+                            Mr. Mihir Mathur holds a Bachelors of Commerce with specialization in Accounts and Finance and is presently pursuing Chartered Accountancy from ICAI. Having worked with Mahendra Asher & Co. he gained experience in the Audit and Indirect Taxation fields. Mihir Co-Founded Snaphub Technologies which specializes in automation of key accounting and financial business processes through their innovative solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Sync: Global Footer (Restored Parity) -->
+        <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-16">
+                     <img src="snaphub logo.png" alt="SnapHub" class="h-10 opacity-70">
+                     <div class="flex flex-wrap justify-center gap-10 text-xs font-bold tracking-widest uppercase text-slate-400">
+                        <a href="paytech.html" class="hover:text-dark transition-colors">Products</a>
+                        <a href="industries.html" class="hover:text-dark transition-colors">Industries</a>
+                        <a href="about.html" class="hover:text-dark transition-colors">About Us</a>
+                        <a href="resources.html" class="hover:text-dark transition-colors">Resources</a>
+                     </div>
+                     <div class="flex items-center gap-6">
+                        <a href="#" class="text-slate-300 hover:text-primary transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-slate-300 hover:text-primary transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-slate-300 hover:text-primary transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                     </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 pt-8 border-t border-slate-50">
+                    <div class="space-y-4">
+                        <p class="text-sm text-slate-500 max-w-sm">Empowering financial institutions with robust, scalable payment solutions.</p>
+                        <div class="space-y-2 text-xs text-slate-400">
+                            <p class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4"></i> 4653/21, Ansari Road, Darya Ganj, Delhi, 110002</p>
+                            <p class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4"></i> 0091 - 9810355291</p>
+                            <p class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4"></i> contact@snaphub.tech</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-end items-end gap-4 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-300">
+                        <p>&copy; 2026 SnapHub Technologies Private Limited. All rights reserved.</p>
+                        <div class="flex gap-8">
+                            <a href="about.html" class="hover:text-dark">About Us</a>
+                            <a href="index.html#offerings" class="hover:text-dark">Offerings</a>
+                            <a href="resources.html" class="hover:text-dark">Resources</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray('.reveal').forEach(el => {
+            gsap.from(el, {
+                opacity: 0,
+                y: 30,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 85%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
